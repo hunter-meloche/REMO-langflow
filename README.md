@@ -5,7 +5,7 @@ GPT-4 and the [REMO memory system](https://github.com/daveshap/REMO_Framework) a
 - Launch REMO
 - Launch langflow and import the json from this repo
 - Put in your OpenAI key in the ChatOpenAI node on the left
-- Chat... It will save the information you give it, but you need to tell it to "organize memories" to put those new memories in the place where the retrieval function can find them (maintain_tree). Ideally this would be automatically trigered, but for the purposes of testing, I've not done this.
+- Chat... It will save the information you give it (add_message), but you need to tell it to "organize memories" (maintain_tree) to put those new memories in the place where the retrieval function (search) can find them. Ideally this would be automatically trigered, but for the purposes of testing, I've not done this.
 
 
 ![image](https://user-images.githubusercontent.com/123516285/232245663-7951c991-c9ed-4115-a9d3-021a0682eb40.png)
