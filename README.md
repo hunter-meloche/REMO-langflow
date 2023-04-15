@@ -1,5 +1,5 @@
 # REMO-langflow
-GPT-4 and the [REMO memory system](https://github.com/daveshap/REMO_Framework) are combined to create a highly intelligent chatbot with a long-term memory. This provides an easy way to interface with it using [Langflow](https://github.com/logspace-ai/langflow).
+GPT-4 and the [REMO memory system](https://github.com/daveshap/REMO_Framework) are combined to create a highly intelligent chatbot with a long-term memory. This provides an easy way to interface with it using [LangFlow](https://github.com/logspace-ai/langflow).
 
 ## How to use
 - Launch REMO
