@@ -1,9 +1,16 @@
 # REMO-langflow
-A GPT-4 chat interface that uses the [REMO memory system](https://github.com/daveshap/REMO_Framework) with [Langflow](https://github.com/logspace-ai/langflow)
+GPT-4 and the [REMO memory system](https://github.com/daveshap/REMO_Framework) are combined to create a highly intelligent chatbot with a long-term memory. This provides an easy way to interface with it using [Langflow](https://github.com/logspace-ai/langflow).
+
+## How to use
+- Launch REMO
+- Launch langflow and import the json from this repo
+- Put in your OpenAI key in the ChatOpenAI node on the left
+- Chat... It will save the information you give it, but you need to tell it to "organize memories" to put those new memories in the place where the retrieval function can find them (maintain_tree). Ideally this would be automatically trigered, but for the purposes of testing, I've not done this.
+
 
 ![image](https://user-images.githubusercontent.com/123516285/232245663-7951c991-c9ed-4115-a9d3-021a0682eb40.png)
 
 ## Implemented
 - Saving memories
 - Finding memories
-- Organizing memories
+- Organizing memories (must be called for new memories to be retrievable)
