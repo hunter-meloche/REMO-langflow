@@ -12,9 +12,9 @@ This is not a complete or ideal implementation. Feel free to improve upon it or 
 - Chat...
 
 ## How it works
-It will save the information you give it (`add_message`), but you need to tell it to "organize memories" (`maintain_tree`) to put those new memories in the place where the retrieval function (`search`) can find them. Ideally this would be automatically triggered, but for the purposes of testing, I've not done this.  You can trigger a rebuild of its memory tree `rebuild_tree` by saying "rebuild tree". 
+It will save the information you give it (`add_message`), but you need to tell it to "organize memories" (`maintain_tree`) to put those new memories in the place where the retrieval function (`search`) can find them. Ideally this would be automatically triggered, but for the purposes of testing, I've not done this.  You can trigger a rebuild of its memory tree (`rebuild_tree`) by saying "rebuild tree". 
 
-Make sure you have at least 2 messages saved before you tell it to organize its memories. The L2 message pairing system takes the last message and connects it to the new message as a pair. Organizing memories creates summaries based on L2 pair data. So if you have 2 pieces of information that are in separate pairs, you won't be able to get both with one call to search the memory. This is where rebuilding the tree comes in to mesh all of the related data together.
+Make sure you have at least 2 messages saved before you tell it to organize its memories. The L2 message pairing system takes a new message and connects it to  the last message as a pair. Tree maintainence creates summaries based on L2 pair data. So if you have 2 pieces of information that are in separate pairs, you won't be able to get both with one call to search the memory. This is where rebuilding the tree comes in to mesh all of the related data together into comprehensive summaries.
 
 ## Implemented
 - Saving memories
