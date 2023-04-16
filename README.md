@@ -21,3 +21,7 @@ Make sure you have at least 2 messages saved before you tell it to organize its 
 - Finding memories
 - Organizing memories (must be called for new memories to be retrievable)
 - Rebuilding memory tree (Useful to trigger when it returns incomplete or incorrect information)
+
+## Known issues
+- sometimes hallucinates information when creating inferences based upon input data
+- does not always use REMO tools when appropriate
