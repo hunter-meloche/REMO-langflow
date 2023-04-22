@@ -12,13 +12,13 @@ This is not a complete or ideal implementation. Feel free to improve upon it or 
 - Chat...
 
 ## How it works
-It will automatically save new information you give it (`add_message`) and call `rebuild_tree` to commit the information to long-term memory. Missing information will be automatically searched for as well (`search`). You can manually tell it to "organize memories" (`maintain_tree`) to create summaries from message pairs and the same can be done for `rebuild_tree` by saying "rebuild tree". 
+It will automatically save new information you give it with an `add_message` API call. Missing information will be automatically searched for as well (`search`). If the relevant information cannot be found, `rebuild_tree` is automatically called to integrate newer memories into retrievable summaries. You can manually tell it to "organize memories" (`maintain_tree`) to create summaries from message pairs and the same can be done for `rebuild_tree` by saying "rebuild tree". 
 
 If `maintain_tree` or `rebuild_tree` is called before at least 2 messages have been saved, you'll get a benign error:
 ```
 The 'n_clusters' parameter of KMeans must be an int in the range [1, inf). Got 0 instead.
 ```
-This should appear the first time it saves a message, unless you're using the manual version. The reason why this is happens is because the L2 message pairing system takes a new message and connects it to the last message as a pair. Tree maintainence creates summaries based on L2 pair data. So if you have 2 pieces of information that are in separate pairs, you won't be able to get both with one call to search the memory. This is where rebuilding the tree comes in to mesh all of the related data together into comprehensive summaries.
+The reason why this is happens is because the L2 message pairing system takes a new message and connects it to the last message as a pair. Tree maintainence creates summaries based on L2 pair data. So if you have 2 pieces of information that are in separate pairs, you won't be able to get both with one call to search the memory. This is where rebuilding the tree comes in to mesh all of the related data together into comprehensive summaries.
 
 ## Implemented
 - Saving memories
